@@ -4,7 +4,7 @@ https://nix.dev/install-nix
 `curl -L https://nixos.org/nix/install | sh`
 
 # clone
-`git clone https://github.com/SymphonyIceAttack/nix-darwin/new/main`
+`git clone git@github.com:SymphonyIceAttack/nix-darwin.git`
 # build
 `darwin-rebuild build --flake .#SymphoneIcedeMacBook-Pro
 `
