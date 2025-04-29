@@ -58,6 +58,7 @@
               "mas"
               "python"
               "neovim"
+              "nvm"
             ];
             casks = [
               {
@@ -67,10 +68,6 @@
               {
                 name = "input-source-pro";
                 greedy = true;
-              }
-              {
-                name = "input-source-pro";
-
               }
               {
                 name = "telegram";
@@ -98,6 +95,10 @@
               }
               {
                 name = "arc";
+                greedy = true;
+              }
+              {
+                name = "signal";
                 greedy = true;
               }
             ];
@@ -133,8 +134,9 @@
               "/Applications/Discord.app"
               "/Applications/WeChat.app"
               "/Applications/QQ.app"
-              "/Applications/Arc.app"
               "/Applications/Warp.app"
+              "/Applications/Arc.app"
+
             ];
             dock.mru-spaces = false;
             loginwindow.GuestEnabled = false;
