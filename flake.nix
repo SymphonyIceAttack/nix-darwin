@@ -60,7 +60,6 @@
               "neovim"
               "nvm"
               "jj"
-
             ];
             casks = [
               {
