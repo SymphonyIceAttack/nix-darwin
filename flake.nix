@@ -46,7 +46,6 @@
             pkgs.lazyjj
           ];
           environment.shellAliases = {
-            gitClean = "git branch --merged | egrep -v ${"(^\*|master)"} | xargs git branch -d";
           };
           fonts.packages = [
             pkgs.nerd-fonts.jetbrains-mono
