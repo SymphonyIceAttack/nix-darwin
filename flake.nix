@@ -59,6 +59,7 @@
               "python"
               "neovim"
               "nvm"
+              "jj"
             ];
             casks = [
               {
