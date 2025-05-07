@@ -136,7 +136,6 @@
               "/Applications/QQ.app"
               "/Applications/Warp.app"
               "/Applications/Arc.app"
-
             ];
             dock.mru-spaces = false;
             loginwindow.GuestEnabled = false;
