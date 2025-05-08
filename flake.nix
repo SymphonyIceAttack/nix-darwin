@@ -60,6 +60,7 @@
               "neovim"
               "nvm"
               "jj"
+              "imagemagick"
             ];
             casks = [
               {
