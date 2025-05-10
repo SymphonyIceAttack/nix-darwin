@@ -44,6 +44,7 @@
             pkgs.devenv
             pkgs.direnv
             pkgs.lazyjj
+            pkgs.jj
           ];
           environment.shellAliases = {
           };
@@ -59,7 +60,6 @@
               "python"
               "neovim"
               "nvm"
-              "jj"
               "imagemagick"
             ];
             casks = [
