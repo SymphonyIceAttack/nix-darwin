@@ -44,7 +44,7 @@
             pkgs.devenv
             pkgs.direnv
             pkgs.lazyjj
-            pkgs.jj
+            pkgs.jujutsu
           ];
           environment.shellAliases = {
           };
