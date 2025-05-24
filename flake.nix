@@ -28,19 +28,31 @@
         {
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
+
           environment.systemPackages = [
+            # code Lsp
+            pkgs.pyright
+            pkgs.nixpkgs-fmt
+            pkgs.nixfmt-rfc-style
+            pkgs.gopls
             pkgs.mkalias
+            pkgs.stylua
+            pkgs.shfmt
+            pkgs.nil
+            pkgs.biome
+            pkgs.hadolint
+            pkgs.lua-language-server
+            # language package manager
             pkgs.cargo
+            # language environment
             pkgs.go
             pkgs.lua
+            # tool
             pkgs.git
-            pkgs.pyright
-            pkgs.nixfmt-rfc-style
             pkgs.fzf
             pkgs.ripgrep
             pkgs.lazygit
             pkgs.wget
-            pkgs.gopls
             pkgs.devenv
             pkgs.direnv
             pkgs.lazyjj
@@ -144,6 +156,10 @@
             NSGlobalDomain.AppleICUForce24HourTime = true;
             NSGlobalDomain.AppleInterfaceStyle = "Dark";
             NSGlobalDomain.KeyRepeat = 2;
+            NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
+            trackpad = {
+              TrackpadThreeFingerDrag = true;
+            };
           };
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
