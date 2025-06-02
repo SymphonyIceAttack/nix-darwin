@@ -32,7 +32,6 @@
           environment.systemPackages = [
             # code Lsp
             pkgs.pyright
-            pkgs.nixpkgs-fmt
             pkgs.nixfmt-rfc-style
             pkgs.gopls
             pkgs.mkalias
@@ -40,10 +39,16 @@
             pkgs.shfmt
             pkgs.nil
             pkgs.biome
-            pkgs.hadolint
+            pkgs.dockerfile-language-server-nodejs
+            pkgs.docker-compose-language-service
             pkgs.lua-language-server
+            pkgs.typescript
+            pkgs.typescript-language-server
+            pkgs.tailwindcss-language-server
             # language package manager
             pkgs.cargo
+            pkgs.bun
+            pkgs.pnpm
             # language environment
             pkgs.go
             pkgs.lua
@@ -73,6 +78,7 @@
               "neovim"
               "nvm"
               "imagemagick"
+              "helix"
             ];
             casks = [
               {
