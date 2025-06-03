@@ -64,6 +64,7 @@
             pkgs.jujutsu
           ];
           environment.shellAliases = {
+           hx = "hx;clear";
           };
           fonts.packages = [
             pkgs.nerd-fonts.jetbrains-mono
