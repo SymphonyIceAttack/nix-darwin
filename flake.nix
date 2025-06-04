@@ -55,16 +55,22 @@
             # tool
             pkgs.git
             pkgs.fzf
-            pkgs.ripgrep
             pkgs.lazygit
             pkgs.wget
             pkgs.devenv
             pkgs.direnv
             pkgs.lazyjj
             pkgs.jujutsu
+            pkgs.ffmpeg
+            pkgs.jq
+            pkgs.poppler
+            pkgs.fd
+            pkgs.ripgrep
+            pkgs.fzf
+            pkgs.zoxide
+            pkgs.resvg
           ];
           environment.shellAliases = {
-           hx = "hx;clear";
           };
           fonts.packages = [
             pkgs.nerd-fonts.jetbrains-mono
@@ -80,6 +86,8 @@
               "nvm"
               "imagemagick"
               "helix"
+              "sevenzip"
+              "yazi"
             ];
             casks = [
               {
