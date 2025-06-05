@@ -1,0 +1,8 @@
+[[mgr.prepend_keymap]]
+on   = [ "g", "g" ]
+run  = "plugin lazygit"
+desc = "run lazygit"
+[[mgr.prepend_keymap]]
+on   = [ "g", "j" ]
+run  = "plugin lazyjj"
+desc = "run lazyjj"

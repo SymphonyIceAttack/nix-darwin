@@ -31,9 +31,12 @@
 
           environment.systemPackages = [
             # code Lsp
+            pkgs.yaml-language-server
             pkgs.pyright
+            pkgs.ruff
             pkgs.nixfmt-rfc-style
             pkgs.gopls
+            pkgs.gotools
             pkgs.mkalias
             pkgs.stylua
             pkgs.shfmt
@@ -45,6 +48,7 @@
             pkgs.typescript
             pkgs.typescript-language-server
             pkgs.tailwindcss-language-server
+            pkgs.taplo
             # language package manager
             pkgs.cargo
             pkgs.bun
@@ -194,6 +198,7 @@
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
         };
+
     in
     {
       # Build darwin flake using:
@@ -228,6 +233,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.verbose = true;
           }
         ];
       };

@@ -1,0 +1,6 @@
+[user]
+name = "SymphoneIce"
+email = "1994370030@qq.com"
+[ui]
+editor = "nvim"
+diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
