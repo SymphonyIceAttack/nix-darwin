@@ -5,6 +5,10 @@ https://nix.dev/install-nix
 
 # clone
 `git clone https://github.com/SymphonyIceAttack/nix-darwin/new/main`
-# build
-`darwin-rebuild build --flake .#SymphoneIcedeMacBook-Pro
+# install
+`sudo nix run nix-darwin/master#darwin-rebuild
+`
+use your own MacName
+# switch
+`darwin-rebuild switch --impure
 `
