@@ -1,3 +1,6 @@
+[language-server.taplo]
+config = {}
+
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
 

@@ -234,6 +234,25 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.verbose = true;
+            users.users.symphoneice = {
+              name = "symphoneice";
+              home = "/Users/symphoneice";
+            };
+            home-manager.users.symphoneice =
+              { pkgs, ... }:
+              {
+                home.stateVersion = "25.05";
+                home.homeDirectory = "/Users/symphoneice";
+                home.username = "symphoneice";
+                home.file = {
+                  ".warp".source = /etc/nix-darwin/config/.warp;
+                  ".zshrc".source = /etc/nix-darwin/config/.zshrc;
+                  ".gitconfig".source = /etc/nix-darwin/config/.gitconfig;
+                  ".config/helix".source = /etc/nix-darwin/config/helix;
+                  ".config/yazi".source = /etc/nix-darwin/config/yazi;
+                  ".config/jj".source = /etc/nix-darwin/config/jj;
+                };
+              };
           }
         ];
       };
