@@ -6,11 +6,8 @@ https://nix.dev/install-nix
 # directory
 `cd /etc`
 # clone
-`git clone https://github.com/SymphonyIceAttack/nix-darwin/new/main`
-# install
-`sudo nix run nix-darwin/master#darwin-rebuild
-`
-use your own MacName
+`git clone https://github.com/SymphonyIceAttack/nix-darwin.git`
+# change SymxxxMac-Pro to use your own MacName in flake.nix
 # once switch
 `sudo nix run nix-darwin/master#darwin-rebuild --extra-experimental-features "nix-command flakes" -- switch --impure`
 # switch
