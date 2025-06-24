@@ -16,7 +16,7 @@ use your own MacName
 `darwin-rebuild switch --impure
 `
 # error list
-## git clone error
+##  not own your with  git clone error
 `darwin-rebuild switch --impure
 building the system configuration...
 error:
