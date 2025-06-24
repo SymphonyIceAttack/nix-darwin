@@ -1,3 +1,4 @@
+# shout down filevalut (关闭文件保险柜)
 # Install nix
 https://nix.dev/install-nix
 ## Macos
