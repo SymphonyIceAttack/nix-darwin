@@ -3,7 +3,8 @@
 https://nix.dev/install-nix
 ## Macos
 `curl -L https://nixos.org/nix/install | sh`
-
+# directory
+`cd /etc`
 # clone
 `git clone https://github.com/SymphonyIceAttack/nix-darwin/new/main`
 # install
