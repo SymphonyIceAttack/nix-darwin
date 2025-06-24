@@ -9,6 +9,8 @@ https://nix.dev/install-nix
 `sudo nix run nix-darwin/master#darwin-rebuild
 `
 use your own MacName
+# once switch
+`sudo nix run nix-darwin/master#darwin-rebuild --extra-experimental-features "nix-command flakes" -- switch --impure`
 # switch
 `darwin-rebuild switch --impure
 `
