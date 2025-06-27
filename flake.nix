@@ -31,10 +31,13 @@
 
           environment.systemPackages = [
             # code Lsp
+            pkgs.superhtml
+            pkgs.vscode-langservers-extracted
             pkgs.yaml-language-server
             pkgs.pyright
             pkgs.ruff
             pkgs.nixfmt-rfc-style
+            pkgs.golangci-lint-langserver
             pkgs.gopls
             pkgs.gotools
             pkgs.mkalias
