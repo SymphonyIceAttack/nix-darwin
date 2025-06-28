@@ -33,8 +33,11 @@
             # code Lsp
             pkgs.superhtml
             pkgs.vscode-langservers-extracted
+            pkgs.ansible-language-server
             pkgs.yaml-language-server
             pkgs.pyright
+            pkgs.pkgs.python313Packages.python-lsp-server
+            pkgs.python313Packages.jedi-language-server
             pkgs.ruff
             pkgs.nixfmt-rfc-style
             pkgs.golangci-lint-langserver
