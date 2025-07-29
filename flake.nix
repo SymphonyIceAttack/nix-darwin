@@ -40,7 +40,6 @@
             pkgs.python313Packages.jedi-language-server
             pkgs.ruff
             pkgs.nixfmt-rfc-style
-            pkgs.golangci-lint-langserver
             pkgs.gopls
             pkgs.gotools
             pkgs.mkalias
@@ -101,7 +100,7 @@
             ];
             casks = [
               {
-                name = "docker";
+                name = "docker-desktop";
                 greedy = true;
               }
               {

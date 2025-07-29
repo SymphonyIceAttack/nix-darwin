@@ -1,12 +1,6 @@
 [language-server.taplo]
 config = {}
 
-[language-server.discord-rpc]
-command = "~/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
-
-[[language]]
-name = "go" # or any language of choice
-language-servers = [ "discord-rpc" ]
 
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
@@ -36,6 +30,19 @@ name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
 
+[[language]]
+name = "go"
+formatter.command = "goimports"
+scope = "source.go"
+injection-regex = "go"
+file-types = ["go"]
+roots = ["go.work", "go.mod"]
+auto-format = true
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "gopls" ]
+# TODO: gopls needs utf-8 offsets?
+indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
 name = "nix"
