@@ -1,6 +1,13 @@
 [language-server.taplo]
 config = {}
 
+[language-server.discord-rpc]
+command = "~/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
+
+[[language]]
+name = "go" # or any language of choice
+language-servers = [ "discord-rpc" ]
+
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
 
@@ -29,10 +36,6 @@ name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
 
-[[language]]
-name = "go"
-auto-format = true
-formatter.command = "goimports"
 
 [[language]]
 name = "nix"
