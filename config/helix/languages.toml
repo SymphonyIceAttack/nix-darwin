@@ -1,6 +1,8 @@
 [language-server.taplo]
 config = {}
 
+[language-server.discord-rpc]
+command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
 
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
@@ -40,7 +42,7 @@ roots = ["go.work", "go.mod"]
 auto-format = true
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "gopls" ]
+language-servers = [ "gopls", "discord-rpc" ]
 # TODO: gopls needs utf-8 offsets?
 indent = { tab-width = 4, unit = "\t" }
 
