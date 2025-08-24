@@ -8,6 +8,7 @@ cursorcolumn = false
 bufferline = "never"
 true-color = true
 color-modes = true
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -27,3 +28,8 @@ mode.select = "SELECT"
 C-s = ":write" # Ctrl and 's' to write
 Cmd-s = ":write" # Cmd or Win or Meta and 's' to write
 A-q = ":write-buffer-close"
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
+other-lines = "warning"
+

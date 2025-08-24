@@ -100,6 +100,10 @@
             ];
             casks = [
               {
+                name = "quickrecorder";
+                greedy = true;
+              }
+              {
                 name = "docker-desktop";
                 greedy = true;
               }
@@ -149,11 +153,11 @@
               upgrade = true;
             };
             taps = [
-              #  {
-              #   name="user/repo";
-              #   clone_target="githuburl";
-              #   force_auto_update=true;
-              #  }
+              {
+                name = "lihaoyun6/tap";
+                clone_target = "https://github.com/lihaoyun6/homebrew-tap";
+                force_auto_update = true;
+              }
             ];
           };
 
