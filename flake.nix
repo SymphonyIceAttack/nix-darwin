@@ -28,7 +28,6 @@
         {
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
-
           environment.systemPackages = [
             # code Lsp
             pkgs.superhtml
@@ -36,8 +35,6 @@
             pkgs.ansible-language-server
             pkgs.yaml-language-server
             pkgs.pyright
-            pkgs.pkgs.python313Packages.python-lsp-server
-            pkgs.python313Packages.jedi-language-server
             pkgs.ruff
             pkgs.nixfmt-rfc-style
             pkgs.gopls
@@ -67,6 +64,7 @@
             pkgs.lazygit
             pkgs.wget
             pkgs.devenv
+            pkgs.bashInteractive
             pkgs.direnv
             pkgs.lazyjj
             pkgs.jujutsu
@@ -160,7 +158,7 @@
               }
             ];
           };
-
+          system.primaryUser = "symphoneice";
           system.defaults = {
             dock.autohide = true;
             dock.persistent-apps = [
