@@ -59,6 +59,7 @@
             pkgs.go
             pkgs.lua
             # tool
+            pkgs.exercism
             pkgs.git
             pkgs.fzf
             pkgs.lazygit
