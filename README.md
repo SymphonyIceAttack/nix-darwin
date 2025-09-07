@@ -7,11 +7,14 @@ https://nix.dev/install-nix
 `cd /etc`
 # clone
 `git clone https://github.com/SymphonyIceAttack/nix-darwin.git`
+# chown
+`sudo chown $(id -nu):$(id -ng) /etc/nix-darwin`
 # change SymxxxMac-Pro to use your own MacName in flake.nix
+`sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix`
 # once switch
 `sudo nix run nix-darwin/master#darwin-rebuild --extra-experimental-features "nix-command flakes" -- switch --impure`
 # switch
-`darwin-rebuild switch --impure
+`sudo darwin-rebuild switch --impure
 `
 # error list
 ##  not own your with  git clone error
