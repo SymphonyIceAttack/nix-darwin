@@ -1,5 +1,5 @@
 [[snippets]]
-prefix = "rfc"
+prefix = "ReactCF"
 scope = [ "typescriptreact" ]  # language id https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers
-body = 'export default function $1() {	return (	<div>$2</div>);}'
+body = 'export default function $1() {	return (	<div>$2</div>)}'
 description = "next component"
