@@ -32,17 +32,26 @@ auto-format = true
 [[language]]
 name = "tsx"
 auto-format = true
-language-servers = ["scls", { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+language-servers = ["scls", { name = "typescript-language-server", except-features = [ "format" ] }, "tailwindcss-ls", "biome" ]
 
 [[language]]
 name = "jsx"
 auto-format = true
-language-servers = [ "scls", { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+language-servers = [ "scls", { name = "typescript-language-server", except-features = [ "format" ] },"tailwindcss-ls", "biome" ]
 
 [[language]]
 name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+
 
 [[language]]
 name = "go"
