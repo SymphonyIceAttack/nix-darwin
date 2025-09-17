@@ -16,8 +16,9 @@ config = {}
 [language-server.discord-rpc]
 command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
 
-[language-server]
-biome = { command = "biome", args = ["lsp-proxy"] }
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"] 
 
 [[language]]
 name = "javascript"
@@ -50,7 +51,9 @@ language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
 
 [[language]]
 name = "css"
-language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+scope = "source.css"
+file-types = ["css", "postcss"]
+language-servers = [ "tailwindcss-ls"]
 
 
 [[language]]

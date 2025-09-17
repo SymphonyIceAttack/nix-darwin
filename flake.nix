@@ -32,6 +32,7 @@
             # code Lsp
             pkgs.superhtml
             pkgs.vscode-langservers-extracted
+            pkgs.nodePackages.postcss
             pkgs.ansible-language-server
             pkgs.yaml-language-server
             pkgs.pyright
@@ -97,8 +98,13 @@
               "helix"
               "sevenzip"
               "yazi"
+              "starship"
             ];
             casks = [
+              {
+                name = "ghostty";
+                greedy = true;
+              }
               {
                 name = "quickrecorder";
                 greedy = true;
