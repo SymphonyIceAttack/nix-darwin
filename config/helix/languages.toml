@@ -18,7 +18,12 @@ command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-
 
 [language-server.biome]
 command = "biome"
-args = ["lsp-proxy"] 
+args = ["lsp-proxy"]
+
+[language-server.vscode-css-language-server]
+command = "vscode-css-language-server"
+args = ["--stdio"]
+config = { provideFormatter = true,css = { validate = { enable = false } } } 
 
 [[language]]
 name = "javascript"
@@ -53,7 +58,7 @@ language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
 name = "css"
 scope = "source.css"
 file-types = ["css", "postcss"]
-language-servers = [ "tailwindcss-ls"]
+language-servers = ["tailwindcss-ls","vscode-css-language-server"]
 
 
 [[language]]
