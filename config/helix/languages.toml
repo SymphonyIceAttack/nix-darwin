@@ -20,6 +20,10 @@ command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-
 command = "biome"
 args = ["lsp-proxy"]
 
+[language-server.typescript-language-server.config.preferences]
+importModuleSpecifier = "non-relative"
+preferTypeOnlyAutoImports = true
+
 [language-server.vscode-css-language-server]
 command = "vscode-css-language-server"
 args = ["--stdio"]
