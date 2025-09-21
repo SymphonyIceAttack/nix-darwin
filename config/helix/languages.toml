@@ -17,7 +17,7 @@ config = {}
 command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
 
 [language-server.biome]
-command = "biome"
+command ="./node_modules/.bin/biome"
 args = ["lsp-proxy"]
 
 [language-server.typescript-language-server.config.preferences]
@@ -63,7 +63,6 @@ name = "css"
 scope = "source.css"
 file-types = ["css", "postcss"]
 language-servers = ["tailwindcss-ls","vscode-css-language-server"]
-
 
 [[language]]
 name = "go"

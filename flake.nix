@@ -44,8 +44,7 @@
             pkgs.stylua
             pkgs.shfmt
             pkgs.nil
-            pkgs.biome
-            pkgs.dockerfile-language-server-nodejs
+            pkgs.dockerfile-language-server
             pkgs.docker-compose-language-service
             pkgs.lua-language-server
             pkgs.typescript
