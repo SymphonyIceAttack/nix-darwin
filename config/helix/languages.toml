@@ -17,7 +17,7 @@ config = {}
 command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
 
 [language-server.biome]
-command ="./node_modules/.bin/biome"
+command ="biome"
 args = ["lsp-proxy"]
 
 [language-server.typescript-language-server.config.preferences]
@@ -33,26 +33,31 @@ config = { provideFormatter = true,css = { validate = { enable = false } } }
 name = "javascript"
 language-servers = [ "scls", { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
-
+formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.js"] }
 [[language]]
 name = "typescript"
 language-servers = [ "scls", { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
+formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.ts"] }
 
 [[language]]
 name = "tsx"
 auto-format = true
 language-servers = ["scls", { name = "typescript-language-server", except-features = [ "format" ] }, "tailwindcss-ls", "biome" ]
+formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.tsx"] }
+
 
 [[language]]
 name = "jsx"
 auto-format = true
 language-servers = [ "scls", { name = "typescript-language-server", except-features = [ "format" ] },"tailwindcss-ls", "biome" ]
+formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.jsx"] }
 
 [[language]]
 name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
+formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.json"] }
 
 [[language]]
 name = "html"

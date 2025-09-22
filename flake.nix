@@ -30,6 +30,7 @@
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
             # code Lsp
+            pkgs.biome
             pkgs.superhtml
             pkgs.vscode-langservers-extracted
             pkgs.nodePackages.postcss
@@ -56,12 +57,14 @@
             pkgs.cargo
             pkgs.bun
             pkgs.pnpm
+            pkgs.uv
             # language environment
             pkgs.go
             pkgs.lua
             # tool
             pkgs.exercism
             pkgs.git
+            pkgs.git-lfs
             pkgs.fzf
             pkgs.lazygit
             pkgs.wget
@@ -169,7 +172,6 @@
           system.defaults = {
             dock.autohide = true;
             dock.persistent-apps = [
-              "/System/Applications/Launchpad.app"
               "/System/Applications/System Settings.app"
               "/System/Applications/Messages.app"
               "/System/Applications/Mail.app"

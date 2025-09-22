@@ -8,7 +8,10 @@ cursorcolumn = false
 bufferline = "multiple"
 true-color = true
 color-modes = true
-end-of-line-diagnostics = "hint"
+completion-replace = true
+
+[editor.auto-save]
+focus-lost = true
 
 [editor.cursor-shape]
 insert = "bar"
