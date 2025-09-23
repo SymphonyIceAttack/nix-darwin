@@ -51,8 +51,8 @@
             pkgs.typescript
             pkgs.typescript-language-server
             pkgs.tailwindcss-language-server
-            pkgs.taplo
             pkgs.simple-completion-language-server
+            pkgs.tombi
             # language package manager
             pkgs.cargo
             pkgs.bun

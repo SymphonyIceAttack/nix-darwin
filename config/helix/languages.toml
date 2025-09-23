@@ -2,22 +2,19 @@
 command = "simple-completion-language-server"
 
 [language-server.scls.config]
-feature_words = false                # enable completion by word
-feature_snippets = true              # enable snippets
-snippets_first = true                # completions will return before snippets by default
-snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
-feature_unicode_input = false        # enable "unicode input"
-feature_paths = false                # enable path completion
-feature_citations = false            # enable citation completion (only on `citation` feature enabled)
-
-[language-server.taplo]
-config = {}
+feature_words = false  # enable completion by word
+feature_snippets = true  # enable snippets
+snippets_first = true  # completions will return before snippets by default
+snippets_inline_by_word_tail = false  # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false  # enable "unicode input"
+feature_paths = false  # enable path completion
+feature_citations = false  # enable citation completion (only on `citation` feature enabled)
 
 [language-server.discord-rpc]
 command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
 
 [language-server.biome]
-command ="biome"
+command = "biome"
 args = ["lsp-proxy"]
 
 [language-server.typescript-language-server.config.preferences]
@@ -27,47 +24,93 @@ preferTypeOnlyAutoImports = true
 [language-server.vscode-css-language-server]
 command = "vscode-css-language-server"
 args = ["--stdio"]
-config = { provideFormatter = true,css = { validate = { enable = false } } } 
+config = { provideFormatter = true, css = { validate = { enable = false } } }
 
 [[language]]
 name = "javascript"
-language-servers = [ "scls", { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+language-servers = [
+  "scls",
+  { name = "typescript-language-server", except-features = ["format"] },
+  "biome",
+]
 auto-format = true
-formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.js"] }
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
+
 [[language]]
 name = "typescript"
-language-servers = [ "scls", { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+language-servers = [
+  "scls",
+  { name = "typescript-language-server", except-features = ["format"] },
+  "biome",
+]
 auto-format = true
-formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.ts"] }
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
 
 [[language]]
 name = "tsx"
 auto-format = true
-language-servers = ["scls", { name = "typescript-language-server", except-features = [ "format" ] }, "tailwindcss-ls", "biome" ]
-formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.tsx"] }
-
+language-servers = [
+  "scls",
+  { name = "typescript-language-server", except-features = ["format"] },
+  "tailwindcss-ls",
+  "biome",
+]
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
 
 [[language]]
 name = "jsx"
 auto-format = true
-language-servers = [ "scls", { name = "typescript-language-server", except-features = [ "format" ] },"tailwindcss-ls", "biome" ]
-formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.jsx"] }
+language-servers = [
+  "scls",
+  { name = "typescript-language-server", except-features = ["format"] },
+  "tailwindcss-ls",
+  "biome",
+]
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
 
 [[language]]
 name = "json"
-language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
+language-servers = [
+  { name = "vscode-json-language-server", except-features = ["format"] },
+  "biome",
+]
 auto-format = true
-formatter = { command = "biome", args = [ "check","--write" ,"--stdin-file-path", "test.json"] }
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
 
 [[language]]
 name = "html"
-language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
 
 [[language]]
 name = "css"
 scope = "source.css"
 file-types = ["css", "postcss"]
-language-servers = ["tailwindcss-ls","vscode-css-language-server"]
+language-servers = ["tailwindcss-ls", "vscode-css-language-server"]
 
 [[language]]
 name = "go"
@@ -79,7 +122,7 @@ roots = ["go.work", "go.mod"]
 auto-format = true
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "gopls", "discord-rpc" ]
+language-servers = ["gopls", "discord-rpc"]
 # TODO: gopls needs utf-8 offsets?
 indent = { tab-width = 4, unit = "\t" }
 
@@ -90,3 +133,11 @@ language-servers = ["nil"]
 formatter.command = "nixfmt"
 formatter.args = ["-"]
 
+[[language]]
+name = "toml"
+language-servers = ["tombi"]
+auto-format = true
+formatter = { command = "tombi", args = [
+  "format",
+  "-",
+] }
