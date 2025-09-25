@@ -130,8 +130,9 @@ indent = { tab-width = 4, unit = "\t" }
 name = "nix"
 auto-format = true
 language-servers = ["nil"]
-formatter.command = "nixfmt"
-formatter.args = ["-"]
+formatter = { command = "nixfmt", args = [
+  "-",
+] }
 
 [[language]]
 name = "toml"
