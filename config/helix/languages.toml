@@ -24,7 +24,6 @@ preferTypeOnlyAutoImports = true
 [language-server.vscode-css-language-server]
 command = "vscode-css-language-server"
 args = ["--stdio"]
-config = { provideFormatter = true, css = { validate = { enable = false } } }
 
 [[language]]
 name = "javascript"
@@ -110,7 +109,10 @@ language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
 name = "css"
 scope = "source.css"
 file-types = ["css", "postcss"]
-language-servers = ["tailwindcss-ls", "vscode-css-language-server"]
+language-servers = [
+  { name = "vscode-css-language-server", except-features = ["diagnostics"] },
+  "tailwindcss-ls",
+]
 
 [[language]]
 name = "go"
