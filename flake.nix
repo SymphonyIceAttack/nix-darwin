@@ -41,6 +41,7 @@
             pkgs.nixfmt-rfc-style
             pkgs.gopls
             pkgs.gotools
+            pkgs.goimports-reviser
             pkgs.mkalias
             pkgs.stylua
             pkgs.shfmt

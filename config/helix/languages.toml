@@ -111,7 +111,14 @@ language-servers = [
 
 [[language]]
 name = "go"
-formatter.command = "goimports"
+formatter = { command = "goimports-reviser", args = [
+  "-rm-unused",
+  "-set-alias",
+  "-output",
+  "stdout",
+  "-format",
+  "-",
+] }
 scope = "source.go"
 injection-regex = "go"
 file-types = ["go"]
