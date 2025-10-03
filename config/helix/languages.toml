@@ -1,3 +1,6 @@
+[language-server.gopls.config]
+"ui.diagnostic.staticcheck" = true
+
 [language-server.scls]
 command = "simple-completion-language-server"
 
@@ -16,14 +19,6 @@ command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-
 [language-server.biome]
 command = "biome"
 args = ["lsp-proxy"]
-
-[language-server.typescript-language-server.config.preferences]
-importModuleSpecifier = "non-relative"
-preferTypeOnlyAutoImports = true
-
-[language-server.vscode-css-language-server]
-command = "vscode-css-language-server"
-args = ["--stdio"]
 
 [[language]]
 name = "javascript"
