@@ -54,6 +54,7 @@
             pkgs.tailwindcss-language-server
             pkgs.simple-completion-language-server
             pkgs.tombi
+            pkgs.yamlfmt
             # language package manager
             pkgs.cargo
             pkgs.bun
