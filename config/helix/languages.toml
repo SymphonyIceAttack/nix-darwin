@@ -22,6 +22,7 @@ args = ["lsp-proxy"]
 
 [[language]]
 name = "javascript"
+roots = ["biome.json"]
 language-servers = [
   "scls",
   { name = "typescript-language-server", except-features = [
@@ -39,6 +40,7 @@ formatter = { command = "biome", args = [
 
 [[language]]
 name = "typescript"
+roots = ["biome.json"]
 language-servers = [
   "scls",
   { name = "typescript-language-server", except-features = [
@@ -56,6 +58,7 @@ formatter = { command = "biome", args = [
 
 [[language]]
 name = "tsx"
+roots = ["biome.json"]
 auto-format = true
 language-servers = [
   "scls",
@@ -74,6 +77,7 @@ formatter = { command = "biome", args = [
 
 [[language]]
 name = "jsx"
+roots = ["biome.json"]
 auto-format = true
 language-servers = [
   "scls",
@@ -92,6 +96,7 @@ formatter = { command = "biome", args = [
 
 [[language]]
 name = "json"
+roots = ["biome.json"]
 language-servers = [
   { name = "vscode-json-language-server", except-features = [
     "format",

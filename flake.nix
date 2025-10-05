@@ -55,6 +55,7 @@
             pkgs.simple-completion-language-server
             pkgs.tombi
             pkgs.yamlfmt
+            pkgs.marksman
             # language package manager
             pkgs.cargo
             pkgs.bun
