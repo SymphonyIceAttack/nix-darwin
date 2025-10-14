@@ -115,10 +115,6 @@
                 greedy = true;
               }
               {
-                name = "docker-desktop";
-                greedy = true;
-              }
-              {
                 name = "input-source-pro";
                 greedy = true;
               }
