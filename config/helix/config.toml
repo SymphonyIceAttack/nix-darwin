@@ -9,6 +9,10 @@ bufferline = "multiple"
 true-color = true
 color-modes = true
 completion-replace = true
+end-of-line-diagnostics = "hint"
+
+[editor.lsp]
+display-progress-messages = true
 
 [editor.auto-save]
 focus-lost = true

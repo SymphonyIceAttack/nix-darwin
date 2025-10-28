@@ -5,19 +5,19 @@
 command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
 
 [language-server.biome]
-command = "./node_modules/@biomejs/biome/bin/biome"
+command = "biome"
 args = ["lsp-proxy"]
 
 [[language]]
 name = "javascript"
 language-servers = [
+  "biome",
   { name = "typescript-language-server", except-features = [
     "format",
   ] },
-  "biome",
 ]
 auto-format = true
-formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
+formatter = { command = "biome", args = [
   "check",
   "--write",
   "--stdin-file-path",
@@ -27,13 +27,13 @@ formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
 [[language]]
 name = "typescript"
 language-servers = [
+  "biome",
   { name = "typescript-language-server", except-features = [
     "format",
   ] },
-  "biome",
 ]
 auto-format = true
-formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
+formatter = { command = "biome", args = [
   "check",
   "--write",
   "--stdin-file-path",
@@ -44,13 +44,13 @@ formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
 name = "tsx"
 auto-format = true
 language-servers = [
+  "biome",
   { name = "typescript-language-server", except-features = [
     "format",
   ] },
   "tailwindcss-ls",
-  "biome",
 ]
-formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
+formatter = { command = "biome", args = [
   "check",
   "--write",
   "--stdin-file-path",
@@ -61,13 +61,13 @@ formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
 name = "jsx"
 auto-format = true
 language-servers = [
+  "biome",
   { name = "typescript-language-server", except-features = [
     "format",
   ] },
   "tailwindcss-ls",
-  "biome",
 ]
-formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
+formatter = { command = "biome", args = [
   "check",
   "--write",
   "--stdin-file-path",
@@ -77,13 +77,13 @@ formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
 [[language]]
 name = "json"
 language-servers = [
+  "biome",
   { name = "vscode-json-language-server", except-features = [
     "format",
   ] },
-  "biome",
 ]
 auto-format = true
-formatter = { command = "./node_modules/@biomejs/biome/bin/biome", args = [
+formatter = { command = "biome", args = [
   "check",
   "--write",
   "--stdin-file-path",
