@@ -30,7 +30,6 @@
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
             # code Lsp
-            pkgs.biome
             pkgs.superhtml
             pkgs.vscode-langservers-extracted
             pkgs.nodePackages.postcss
@@ -65,6 +64,7 @@
             pkgs.go
             pkgs.lua
             # tool
+            pkgs.gemini-cli
             pkgs.exercism
             pkgs.git
             pkgs.git-lfs

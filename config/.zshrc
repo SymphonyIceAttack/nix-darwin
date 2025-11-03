@@ -11,3 +11,5 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+export PNPM_HOME="/Users/symphoneice/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"

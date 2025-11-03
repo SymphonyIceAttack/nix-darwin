@@ -5,8 +5,8 @@
 command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
 
 [language-server.biome]
-command = "biome"
-args = ["lsp-proxy"]
+command = "npx"
+args = ["biome", "lsp-proxy"]
 
 [[language]]
 name = "javascript"
@@ -17,7 +17,8 @@ language-servers = [
   ] },
 ]
 auto-format = true
-formatter = { command = "biome", args = [
+formatter = { command = "npx", args = [
+  "biome",
   "check",
   "--write",
   "--stdin-file-path",
@@ -33,7 +34,8 @@ language-servers = [
   ] },
 ]
 auto-format = true
-formatter = { command = "biome", args = [
+formatter = { command = "npx", args = [
+  "biome",
   "check",
   "--write",
   "--stdin-file-path",
@@ -50,7 +52,8 @@ language-servers = [
   ] },
   "tailwindcss-ls",
 ]
-formatter = { command = "biome", args = [
+formatter = { command = "npx", args = [
+  "biome",
   "check",
   "--write",
   "--stdin-file-path",
@@ -67,7 +70,8 @@ language-servers = [
   ] },
   "tailwindcss-ls",
 ]
-formatter = { command = "biome", args = [
+formatter = { command = "npx", args = [
+  "biome",
   "check",
   "--write",
   "--stdin-file-path",
@@ -83,7 +87,8 @@ language-servers = [
   ] },
 ]
 auto-format = true
-formatter = { command = "biome", args = [
+formatter = { command = "npx", args = [
+  "biome",
   "check",
   "--write",
   "--stdin-file-path",
