@@ -58,13 +58,13 @@
             # language package manager
             pkgs.cargo
             pkgs.bun
-            pkgs.pnpm
             pkgs.uv
+            pkgs.pnpm
             # language environment
             pkgs.go
             pkgs.lua
             # tool
-            pkgs.gemini-cli
+            pkgs.docker
             pkgs.exercism
             pkgs.git
             pkgs.git-lfs
@@ -107,6 +107,10 @@
               "mole"
             ];
             casks = [
+              {
+                name = "orbstack";
+                greedy = true;
+              }
               {
                 name = "ghostty";
                 greedy = true;
