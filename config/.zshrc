@@ -1,3 +1,5 @@
+export PATH=/Users/symphoneice/.local/bin:$PATH
+export PATH="/Users/symphoneice/.bun/bin:$PATH"
 export PNPM_HOME="/Users/symphoneice/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 export NVM_DIR=~/.nvm

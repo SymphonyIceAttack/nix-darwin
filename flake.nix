@@ -277,6 +277,7 @@
                   ".config/helix".source = /etc/nix-darwin/config/helix;
                   ".config/yazi".source = /etc/nix-darwin/config/yazi;
                   ".config/jj".source = /etc/nix-darwin/config/jj;
+                  ".codex/config.toml".source = /etc/nix-darwin/config/.codex/config.toml;
                 };
               };
           }
