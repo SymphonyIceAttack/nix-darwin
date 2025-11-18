@@ -11,6 +11,21 @@ stream_idle_timeout_ms = 300000
 [profiles.m2]
 model = "codex-MiniMax-M2"
 model_provider = "minimax"
+# 自动执行配置 - 使用连字符
+approval_policy = "on-failure"
+sandbox_mode = "read-only"
+trust_level = "trusted"
+# 会话管理
+history_persistence = "save-all"
+shell_environment_policy = "inherit=all"
+web_search_request = true
 
 [projects."/Users/symphoneice/Downloads/CodeProject/CloudflareProject/yes-or-no-wheel"]
 trust_level = "trusted"
+
+[notice]
+hide_full_access_warning = true
+
+[mcp_servers.next-devtools]
+command = "npx"
+args = ["next-devtools-mcp@latest"]
