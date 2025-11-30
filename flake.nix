@@ -85,6 +85,7 @@
             pkgs.fzf
             pkgs.zoxide
             pkgs.resvg
+            pkgs.tree
           ];
           environment.shellAliases = {
           };
@@ -106,13 +107,13 @@
               "yazi"
               "starship"
               "mole"
+              "crush"
             ];
             casks = [
               {
                 name = "claude-code";
                 greedy = true;
               }
-
               {
                 name = "orbstack";
                 greedy = true;
@@ -181,7 +182,11 @@
                 clone_target = "https://github.com/tw93/homebrew-tap";
                 force_auto_update = true;
               }
-
+              {
+                name = "charmbracelet/tap";
+                clone_target = "https://github.com/charmbracelet/homebrew-tap";
+                force_auto_update = true;
+              }
             ];
           };
           system.primaryUser = "symphoneice";
