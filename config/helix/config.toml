@@ -1,0 +1,49 @@
+theme = "symphonyiceattack"
+
+[editor]
+line-number = "relative"
+mouse = true
+cursorline = true
+cursorcolumn = false
+bufferline = "multiple"
+true-color = true
+color-modes = true
+completion-replace = true
+end-of-line-diagnostics = "hint"
+
+[editor.lsp]
+display-progress-messages = true
+
+[editor.auto-save]
+focus-lost = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+  "spinner",
+]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"  # show warnings and errors on the cursorline inline
+other-lines = "warning"
+
+[keys.normal]
+C-s = ":write"  # Ctrl and 's' to write
+Cmd-s = ":write"  # Cmd or Win or Meta and 's' to write
+A-q = ":write-buffer-close"

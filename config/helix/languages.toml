@@ -1,0 +1,145 @@
+[language-server.gopls.config]
+"ui.diagnostic.staticcheck" = true
+
+[language-server.discord-rpc]
+command = "/Users/symphoneice/Downloads/CodeProject/discord-rpc-lsp/discord-rpc-lsp"
+
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
+[[language]]
+name = "javascript"
+language-servers = [
+  "biome",
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+]
+auto-format = true
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
+
+[[language]]
+name = "typescript"
+language-servers = [
+  "biome",
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+]
+auto-format = true
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
+
+[[language]]
+name = "tsx"
+auto-format = true
+language-servers = [
+  "biome",
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "tailwindcss-ls",
+]
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
+
+[[language]]
+name = "jsx"
+auto-format = true
+language-servers = [
+  "biome",
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "tailwindcss-ls",
+]
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
+
+[[language]]
+name = "json"
+language-servers = [
+  "biome",
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+]
+auto-format = true
+formatter = { command = "biome", args = [
+  "check",
+  "--write",
+  "--stdin-file-path",
+  "%{buffer_name}",
+] }
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
+
+[[language]]
+name = "css"
+scope = "source.css"
+file-types = ["css", "postcss"]
+language-servers = [
+  { name = "vscode-css-language-server", except-features = [
+    "diagnostics",
+  ] },
+  "tailwindcss-ls",
+]
+
+[[language]]
+name = "go"
+formatter = { command = "goimports-reviser", args = [
+  "-rm-unused",
+  "-set-alias",
+  "-output",
+  "stdout",
+  "-format",
+  "-",
+] }
+scope = "source.go"
+injection-regex = "go"
+file-types = ["go"]
+roots = ["go.work", "go.mod"]
+auto-format = true
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["gopls", "discord-rpc"]
+# TODO: gopls needs utf-8 offsets?
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "nix"
+auto-format = true
+language-servers = ["nil"]
+formatter = { command = "nixfmt", args = ["-"] }
+
+[[language]]
+name = "toml"
+language-servers = ["tombi"]
+auto-format = true
+formatter = { command = "tombi", args = ["format", "-"] }
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server"]
+auto-format = true
+formatter = { command = "yamlfmt", args = ["-"] }
