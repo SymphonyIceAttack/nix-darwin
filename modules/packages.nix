@@ -49,6 +49,7 @@
     direnv
     lazyjj
     jujutsu
+    jjui
     ffmpeg
     jq
     poppler
