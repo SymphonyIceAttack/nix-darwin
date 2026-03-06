@@ -5,3 +5,7 @@ email = "1994370030@qq.com"
 [ui]
 editor = "hx"
 diff-editor = ["hx", "-c", "DiffEditor $left $right $output"]
+
+[snapshot]
+# the following is equivalent
+max-new-file-size = 10485760
