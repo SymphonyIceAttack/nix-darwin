@@ -14,7 +14,8 @@
       "starship"
       "mole"
       "crush"
-      "awscli"
+      "tesseract-lang"
+      "tesseract"
     ];
     casks = [
       {
