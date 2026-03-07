@@ -16,6 +16,7 @@
       "crush"
       "tesseract-lang"
       "tesseract"
+      "poppler"
     ];
     casks = [
       {
