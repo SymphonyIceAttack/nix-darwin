@@ -23,7 +23,7 @@ in
         ".gitconfig".source = /etc/nix-darwin/config/.gitconfig;
         ".config/helix".source = /etc/nix-darwin/config/helix;
         ".config/yazi".source = /etc/nix-darwin/config/yazi;
-        ".config/jj".source = /etc/nix-darwin/config/jj;
+        ".config/jj/config.toml".source = /etc/nix-darwin/config/jj/config.toml;
       };
     };
 }

@@ -4,11 +4,13 @@ edit = [
 ]
 
 [[plugin.prepend_fetchers]]
+group = "git"
 id = "git"
-name = "*"
+url = "*"
 run = "git"
 
 [[plugin.prepend_fetchers]]
+group = "git"
 id = "git"
-name = "*/"
+url = "*/"
 run = "git"

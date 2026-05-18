@@ -4,12 +4,13 @@
     # code Lsp
     superhtml
     vscode-langservers-extracted
-    nodePackages.postcss
+    postcss
     ansible-language-server
     yaml-language-server
     pyright
     ruff
     nixfmt-rfc-style
+    rustfmt
     gopls
     gotools
     goimports-reviser

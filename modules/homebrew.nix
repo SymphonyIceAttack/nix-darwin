@@ -17,6 +17,8 @@
       "tesseract-lang"
       "tesseract"
       "poppler"
+      "agent-browser"
+      "qsv"
     ];
     casks = [
       {
@@ -44,10 +46,6 @@
         greedy = true;
       }
       {
-        name = "warp";
-        greedy = true;
-      }
-      {
         name = "discord";
         greedy = true;
       }
@@ -61,10 +59,6 @@
       }
       {
         name = "qq";
-        greedy = true;
-      }
-      {
-        name = "arc";
         greedy = true;
       }
       {
