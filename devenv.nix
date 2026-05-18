@@ -16,4 +16,9 @@
     filename = ".env.crush";
   };
 
+  git-hooks = {
+    enable = false;
+    configPath = ".git/hooks/pre-commit";
+  };
+
 }
