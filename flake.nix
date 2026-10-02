@@ -5,7 +5,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    mac-app-util.url = "github:hraban/mac-app-util";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +15,6 @@
       self,
       nix-darwin,
       nixpkgs,
-      mac-app-util,
       nix-homebrew,
       home-manager,
     }:
@@ -60,10 +58,6 @@
       darwinConfigurations."SymphoneIcedeMacBook-Pro" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
-          # This is a Nix module for Macintosh computers ("darwin")
-          # which fixes a few common problems encountered by users of
-          # Nix on Macs:
-          mac-app-util.darwinModules.default
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
