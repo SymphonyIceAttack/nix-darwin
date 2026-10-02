@@ -41,10 +41,6 @@
         greedy = true;
       }
       {
-        name = "discord";
-        greedy = true;
-      }
-      {
         name = "spotify";
         greedy = true;
       }
