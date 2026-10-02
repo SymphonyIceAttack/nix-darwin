@@ -21,10 +21,6 @@
     ];
     casks = [
       {
-        name = "claude-code";
-        greedy = true;
-      }
-      {
         name = "orbstack";
         greedy = true;
       }
