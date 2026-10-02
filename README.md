@@ -287,5 +287,5 @@ sudo darwin-rebuild switch --flake .#$(scutil --get LocalHostName) --impure
 - This configuration uses `nixpkgs-unstable`.
 - Homebrew is managed declaratively through nix-darwin.
 - Home Manager links source files from `config/` into the user's home directory.
-- Keep secrets out of Git. Environment files such as `.env.crush` should stay
+- Keep secrets out of Git. Environment files such as `.env` should stay
   ignored.

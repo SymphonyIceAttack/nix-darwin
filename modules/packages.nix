@@ -42,6 +42,7 @@
     exercism
     git
     git-lfs
+    gh
     fzf
     lazygit
     wget

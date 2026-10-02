@@ -13,7 +13,6 @@
       "yazi"
       "starship"
       "mole"
-      "crush"
       "tesseract-lang"
       "tesseract"
       "poppler"
@@ -70,7 +69,8 @@
 
     };
     onActivation = {
-      cleanup = "zap";
+      # Homebrew 7 removed the bundle --cleanup switch.
+      cleanup = "none";
       autoUpdate = true;
       upgrade = true;
     };
@@ -83,11 +83,6 @@
       {
         name = "tw93/tap";
         clone_target = "https://github.com/tw93/homebrew-tap";
-        force_auto_update = true;
-      }
-      {
-        name = "charmbracelet/tap";
-        clone_target = "https://github.com/charmbracelet/homebrew-tap";
         force_auto_update = true;
       }
     ];
