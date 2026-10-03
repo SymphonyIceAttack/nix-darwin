@@ -33,7 +33,7 @@
     cargo
     bun
     uv
-    pnpm
+    (pkgs.callPackage ../packages/pnpm.nix { })
     # language environment
     go
     lua
