@@ -11,7 +11,6 @@
       "/Applications/Surge.app"
       "/Applications/Steam.app"
       "/Applications/Spotify.app"
-      "/Applications/Discord.app"
       "/Applications/WeChat.app"
       "/Applications/QQ.app"
       "/Applications/Warp.app"

@@ -72,11 +72,6 @@
         clone_target = "https://github.com/lihaoyun6/homebrew-tap";
         force_auto_update = true;
       }
-      {
-        name = "tw93/tap";
-        clone_target = "https://github.com/tw93/homebrew-tap";
-        force_auto_update = true;
-      }
     ];
   };
 }
